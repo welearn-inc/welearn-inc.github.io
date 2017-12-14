@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body,main {
+	min-height: 100% !important;
+    height: 100%;
+}
+body {
+	height: 100%;
+	font-family: Montserrat, sans-serif;
+	font-size: 16px;
+}
+/*========================================
+			Navbar
+=========================================*/
+.navbar {
+	padding: 0 0px;
+}
+.navbar-wrapper {
+	background-color: #fff;
+}
+.navbar-wrapper .container-fluid {
+	padding-right: 0px !important;
+}
+.menu-catalog {
+	margin: 0 30px;
+	border-left: 2px solid #e8eef0;
+	border-right: 2px solid #e8eef0;
+	padding: 23px 30px;
+}
+.menu-catalog:hover {
+	background-color: #F4F4F4;
+}
+.catalog-icon span {
+	font-weight: 500;
+	font-size: 16px;
+}
+.catalog-icon img {
+	margin-bottom: 3px;
+	margin-right: 5px;
+}
+.search-form {
+	border-radius: 0px;
+	background-color: #eaeaea;
+	min-width: 300px !important;
+	margin-right: 0px !important;
+    padding: 10px 15px;
+    border: 2px solid #eaeaea;
+}
+.search-btn i {
+	background-color: #2281e7;
+	color: #fff;
+	padding: 15px 20px;
+}
+.simplebox {
+  outline: none;
+  border: 1px solid #eaeaea !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.user-wrapper {
+	width: auto;
+}
+.user-login {
+	display: inline-block;
+}
+.user-login a {
+	text-decoration: none;
+	color: #2e2f33;
+	padding: 27px 30px;
+	font-weight: 500;
+	margin-right: -5px;
+}
+.user-login a:hover {
+	background-color: #F4F4F4;
+}
+.user-login a img {
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+.user-sign-up {
+	display: inline-block;
+}
+.user-sign-up a {
+	text-decoration: none;
+	color: #fff;
+	background-color: #2281e7;
+	padding: 27px 30px;
+	font-weight: 500;
+}
+/*========================================
+				Home Section
+=========================================*/
+.hero {
+	background-image: url('../images/hero-bg.jpg');
+	height: 100%;
+    position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.hero::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+.banner-area {
+	margin: 0 15px;
+	height: 100%
+}
+.banner {
+	background-color: #32445A;
+	height: 40%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0 15px;
+}
