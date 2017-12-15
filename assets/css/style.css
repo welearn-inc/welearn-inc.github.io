@@ -18,6 +18,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 /*========================================
 			Navbar
 =========================================*/
@@ -164,4 +170,39 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     padding: 22px 29px;
     font-size: 20px;
+}
+.feature-wrapper {
+	background-color: #eaeaea;
+}
+.brand-wrapper {
+	background-color: #eaeaea;
+}
+.feature-container [class*="col-"] {
+	padding: 0;
+	background-color: #2e2f33;
+	border-left: 1px solid #4d4e51;
+}
+.feature-container {
+	padding: 0 15px;
+}
+.feature-item {
+	color: #fff;
+	padding: 30px;
+	display: flex;
+
+}
+.feature-item-desc p {
+	display: inline;
+	font-size: 14px;
+	color: #d0d0d0;
+}
+.feature-item-icon img {
+	margin-right: 16px;
+    margin-top: 5px;
+}
+.brand-item-list {
+	padding: 60px 0 30px 0;
+}
+.center-block {
+	margin:auto;
 }
