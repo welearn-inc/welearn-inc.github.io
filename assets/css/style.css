@@ -171,6 +171,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 22px 29px;
     font-size: 20px;
 }
+/*========================================
+				Feature Section
+=========================================*/
 .feature-wrapper {
 	background-color: #eaeaea;
 }
@@ -205,4 +208,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 .center-block {
 	margin:auto;
+}
+/*========================================
+				Trending Section
+=========================================*/
+.we-title h2 {
+	padding: 30px;
+	font-size: 32px;
+	font-weight: 700;
+}
+.trending-item {
+	/*box-shadow: 0 0 1em rgba(0, 0, 0, 0.175)*/
+}
+.owl-theme .owl-nav [class*=owl-] {
+	background: none !important;
+}
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    margin-left: -22px !important;
+    display: block!IMPORTANT;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 35%;
+    right: 42px;
+    display: block!IMPORTANT;
+    border:0px solid black;
+}
+.owl-nav .owl-prev.disabled,
+.owl-nav .owl-next.disabled {
+   display: none !important;
 }
