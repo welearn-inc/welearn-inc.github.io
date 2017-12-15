@@ -15,11 +15,18 @@ body {
 	font-family: Montserrat, sans-serif;
 	font-size: 16px;
 }
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
 /*========================================
 			Navbar
 =========================================*/
 .navbar {
 	padding: 0 0px;
+}
+.navbar-brand img {
+	height: 50px;
+	padding-bottom: 2px;
 }
 .navbar-wrapper {
 	background-color: #fff;
@@ -114,15 +121,47 @@ body {
 	width: 100%;
 	background-color: rgba(0,0,0,0.3);
 }
-.banner-area {
-	margin: 0 15px;
-	height: 100%
-}
-.banner {
-	background-color: #32445A;
-	height: 40%;
+.banner-wrapper {
 	position: absolute;
-	bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.banner-container {
+	background-color: #32445a;
+	padding: 50px 0;
+	background-image: url('../images/banner-bg.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.banner-title h1 {
+	font-size: 42px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 30px
+}
+.banner-desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.banner-search {
+	padding: 0px 90px;
+}
+.banner-form {
+	display: flex;
+}
+.banner-field {
 	width: 100%;
-	padding: 0 15px;
+    padding: 14px 25px;
+    color: #e8eef0;
+	border-radius: 0;
+	background-color: #EAEAEA;
+	font-size: 20px;
+}
+.banner-form .search-btn  i {
+	background-color: #2281e7;
+    color: #fff;
+    padding: 22px 29px;
+    font-size: 20px;
 }
