@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 =========================================*/
 .hero {
 	background-image: url('../images/hero-bg.jpg');
-	height: 100%;
+	height: 100vh;
     position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -397,4 +397,90 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 18px;
     text-decoration: none;
     padding-left: 10px;
+}
+/*========================================
+				Hire Instructor
+=========================================*/
+.hire-instructor {
+	background: #fff url('../images/bg_pattern_02.png') repeat-x bottom center;
+	padding-top: 60px;
+}
+.hire-title h1 {
+	font-weight: 700;
+	font-size: 46px;
+	margin-bottom: 30px;
+}
+.hire-desc {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.hire-btn a {
+	background-color: #2281e7;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 0;
+    padding: 11px 24px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+.hire-btn a:hover {
+	background-color: #3496FF;
+}
+/*========================================
+				Footer
+=========================================*/
+.footer-content {
+	background-color: #32445A;
+	padding: 60px;
+}
+.copyright {
+	background-color: #2b3a4e;
+}
+.footer-title {
+	color: #fff;
+}
+.footer-title span {
+	font-size: 24px;
+}
+.footer-title ul {
+	margin-top: 20px;
+}
+.footer-title ul li {
+	list-style: none;
+}
+.footer-title ul li a {
+	color: #949DA9;
+	font-size: 14px;
+	font-weight: 400;
+}
+.footer-title ul li a:hover {
+	text-decoration: none;
+}
+.icon-list {
+	display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.icon-list li {
+	list-style: none;
+}
+.icon-list li i {
+	color: #fff;
+    font-size: 26px;
+    height: 60px;
+    width: 60px;
+    padding-top: 18px;
+}
+.icon-bg-dark {
+	background-color: #2b3a4e;
+}
+.icon-bg-light {
+	background-color: #47576b;
+}
+.copyright {
+	padding:30px;
+}
+.copyright span {
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 14px;
 }
