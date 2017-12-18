@@ -210,16 +210,29 @@ h1, h2, h3, h4, h5, h6 {
 	margin:auto;
 }
 /*========================================
-				Trending Section
+				Header
 =========================================*/
+.we-title {
+	padding: 55px 10px 40px 20px;	
+}
 .we-title h2 {
-	padding: 30px;
 	font-size: 32px;
 	font-weight: 700;
 }
-.trending-item {
-	/*box-shadow: 0 0 1em rgba(0, 0, 0, 0.175)*/
+.see-all {
+	background-color: #2281e7;
+	color: #fff;
+	margin-right: 20px;
+	padding: 10px 15px;
 }
+.see-all:hover {
+	background-color: #3496FF;
+	color: #fff;
+	text-decoration: none;
+}
+/*========================================
+				Carousel
+=========================================*/
 .owl-theme .owl-nav [class*=owl-] {
 	background: none !important;
 }
@@ -246,6 +259,9 @@ h1, h2, h3, h4, h5, h6 {
 .owl-nav .owl-next.disabled {
    display: none !important;
 }
+/*========================================
+				Card Item
+=========================================*/
 .card {
 	box-shadow: 0 0 1em rgba(0, 0, 0, 0.175) !important;
 }
@@ -281,11 +297,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .divider {
 	height: 1px;
+	background-color: #EAEAEA;
+	margin-top: 50px;
+/*    margin-bottom: 30px;*/
 }
 .card-bot {
 	border-top: 1px solid #e0e0e1;
 	padding-top: 10px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 .card-course-name a{
 	text-transform: uppercase;
@@ -299,4 +318,83 @@ h1, h2, h3, h4, h5, h6 {
 .rating i {
 	font-size: 12px;
 	color: #ff8614;
+}
+/*========================================
+				Featured Instructor
+=========================================*/
+.featured-instructor {
+	background-color: #eaeaea;
+	margin-top: 60px;
+	padding-bottom: 60px;
+}
+.instructor-wrapper {
+	margin: 0 20px;
+}
+.dark-gray-bg {
+	background-color: #3e4043;
+	color: #eaeaea;
+}
+.light-gray-bg {
+	background-color: #565659;
+	color: #eaeaea;
+}
+.instructor-info {
+	padding: 30px;
+}
+.instructor-name {
+	font-weight: 700;
+	font-size: 24px;
+}
+.block-student {
+	border-right: 1px solid #6f6f72;
+	margin: 10px 0 10px 30px;
+	font-weight: 500;
+	padding: 20px 0;
+}
+.block-courses {
+	margin: 30px;
+	font-weight: 500;
+}
+.block-student span {
+	display: block;
+}
+.block-courses span {
+	display: block;
+}
+.block-img {
+	width: 100%;
+}
+.block-teacher-img {
+	position: relative;
+}
+.block-courses-img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+}
+.instructor-item {
+	width: 945px;
+}
+.block-courses-img .col-md-6 .course-detail a img {
+	width: 30%;
+	display: inline-block;
+}
+.block-courses-img .col-md-6 .course-detail a {
+	display: flex;
+	margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-right: 10px
+}
+.block-courses-img .col-md-6 .course-detail a:hover {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 1.0);
+}
+.block-courses-img .col-md-6 .course-detail a span {
+	color: #000;
+    font-size: 12px;
+    padding-top: 18px;
+    text-decoration: none;
+    padding-left: 10px;
 }

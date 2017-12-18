@@ -5,7 +5,7 @@
 	<title>| WeLearn</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="assets/images/WeLearn_Round.svg">
+	<link rel="shortcut icon" href="assets/images/WeLearn_Round.png">
 	<!-- Normalize -->
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<!-- Bootstrap -->
@@ -19,6 +19,8 @@
 	<!-- Own Carousel -->
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	<!-- Tool Tipster -->
+	<link rel="stylesheet" href="assets/css/tooltipster.bundle.min.css">
 </head>
 <body>
 	<!-- Header -->
@@ -167,15 +169,16 @@
 		</section>
 		<!-- Trending Section -->
 		<section class="trending">
-			<div class="we-title">
+			<div class="we-title d-flex justify-content-between align-items-center">
 				<h2>Trending</h2>
+				<a href="#" class="see-all">See All</a>
 			</div>
-			<div class="trending-wrapper">
+			<div class="carousel-x-wrapper">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="trending-courses-items owl-carousel owl-theme">
-								<div class="trending-item">
+							<div class="carousel-x-courses-items owl-carousel owl-theme">
+								<div class="carousel-x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_1.jpg" alt="Card image cap">
 										<div class="card-body">
@@ -201,7 +204,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="trending-item">
+								<div class="carousel-x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_2.jpg" alt="Card image cap">
 										<div class="card-body">
@@ -226,7 +229,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="trending-item">
+								<div class="carousel-x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_3.png" alt="Card image cap">
 										<div class="card-body">
@@ -251,7 +254,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="trending-item">
+								<div class="carousel-x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_4.png" alt="Card image cap">
 										<div class="card-body">
@@ -276,7 +279,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="trending-item">
+								<div class="carousel-x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_5.jpeg" alt="Card image cap">
 										<div class="card-body">
@@ -301,11 +304,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="trending-item">
+								<div class="x-item">
 									<div class="card" style="width: 20rem;">
 										<img class="card-img-top" src="assets/images/courses/img_thumb_6.jpg" alt="Card image cap">
 										<div class="card-body">
-											<a href="#" class="card-title">Javascript Tutorial for Beginners</a>
+											<a href="#" class="card-title">Javascript Tutorial</a>
 											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 											<a href="#" class="card-author">sqexam</a><span> | 112 Students</span>
 											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
@@ -332,7 +335,566 @@
 				</div>
 			</div>
 		</section>
-
+		<div class="divider"></div>
+		<!-- High Tech Section -->
+		<section class="high-tech">
+			<div class="we-title d-flex justify-content-between align-items-center">
+				<h2>High Tech</h2>
+				<a href="#" class="see-all">See All</a>
+			</div>
+			<div class="carousel-x-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="carousel-x-courses-items owl-carousel owl-theme">
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_1.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">edX Demonstration Course</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">demonstration123</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_2.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Database in Python</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">det123</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_3.png" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Creating Django Forms</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">cdf322</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_4.png" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Django Basics</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">basic_dja</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_5.jpeg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Enterprise Testing - ETL</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">etl_sc</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_6.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Javascript Tutorial</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">sqexam</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="divider"></div>
+		<!-- Personal Developer -->
+		<section class="personal-developer">
+			<div class="we-title d-flex justify-content-between align-items-center">
+				<h2>Personal Developer</h2>
+				<a href="#" class="see-all">See All</a>
+			</div>
+			<div class="carousel-x-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="carousel-x-courses-items owl-carousel owl-theme">
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_1.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">edX Demonstration Course</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">demonstration123</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_2.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Database in Python</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">det123</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_3.png" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Creating Django Forms</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">cdf322</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_4.png" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Django Basics</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">basic_dja</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_5.jpeg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Enterprise Testing - ETL</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">etl_sc</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-xtrending-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/courses/img_thumb_6.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="#" class="card-title">Javascript Tutorial</a>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="card-author">sqexam</a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+														<i class="fa fa-star-o"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Featured Instructor -->
+		<section class="featured-instructor">
+			<div class="we-title d-flex justify-content-between align-items-center">
+				<h2>Featured Instructor</h2>
+			</div>
+			<div class="instructor-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="instructor-container owl-carousel owl-theme">
+								<div class="instructor-item">
+									<div class="row no-gutters">
+										<div class="col-md-4 d-flex flex-column justify-content-between dark-gray-bg">
+											<div class="instructor-info">
+												<div class="instructor-name">Grant Norris</div>
+												<div class="instructor-desc">
+													<p>Create high ranking websites that offer a real return on investment.</p>
+												</div>
+												<a href="#" class="see-all">All Courses</a>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-student">
+														<h4>356</h4>
+														<span>Student</span>
+													</div>
+												</div>	
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-courses">
+														<h4>22</h4>
+														<span>Courses</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="block-teacher-img">
+												<img src="assets/images/img_feature_teacher_01.jpg" alt="" class="img-responsive block-img">
+												<div class="row block-courses-img">
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+																<img src="assets/images/img_feature_teacher_article_01.jpg" alt="">
+																<span>The complete Developer Course 2.0</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+															<img src="assets/images/img_feature_teacher_article_02.jpg" alt="">
+															<span>The complete Developer Course 2.0</span>
+														</a>
+														</div>
+														
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="instructor-item">
+									<div class="row no-gutters">
+										<div class="col-md-4 d-flex flex-column justify-content-between dark-gray-bg">
+											<div class="instructor-info">
+												<div class="instructor-name">Grant Norris</div>
+												<div class="instructor-desc">
+													<p>Create high ranking websites that offer a real return on investment.</p>
+												</div>
+												<a href="#" class="see-all">All Courses</a>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-student">
+														<h4>356</h4>
+														<span>Student</span>
+													</div>
+												</div>	
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-courses">
+														<h4>22</h4>
+														<span>Courses</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="block-teacher-img">
+												<img src="assets/images/img_feature_teacher_02.jpg" alt="" class="img-responsive block-img">
+												<div class="row block-courses-img">
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+																<img src="assets/images/img_feature_teacher_article_01.jpg" alt="">
+																<span>The complete Developer Course 2.0</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+															<img src="assets/images/img_feature_teacher_article_02.jpg" alt="">
+															<span>The complete Developer Course 2.0</span>
+														</a>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="instructor-item">
+									<div class="row no-gutters">
+										<div class="col-md-4 d-flex flex-column justify-content-between dark-gray-bg">
+											<div class="instructor-info">
+												<div class="instructor-name">Grant Norris</div>
+												<div class="instructor-desc">
+													<p>Create high ranking websites that offer a real return on investment.</p>
+												</div>
+												<a href="#" class="see-all">All Courses</a>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-student">
+														<h4>356</h4>
+														<span>Student</span>
+													</div>
+												</div>	
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-courses">
+														<h4>22</h4>
+														<span>Courses</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="block-teacher-img">
+												<img src="assets/images/img_feature_teacher_01.jpg" alt="" class="img-responsive block-img">
+												<div class="row block-courses-img">
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+																<img src="assets/images/img_feature_teacher_article_01.jpg" alt="">
+																<span>The complete Developer Course 2.0</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+															<img src="assets/images/img_feature_teacher_article_02.jpg" alt="">
+															<span>The complete Developer Course 2.0</span>
+														</a>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="instructor-item">
+									<div class="row no-gutters">
+										<div class="col-md-4 d-flex flex-column justify-content-between dark-gray-bg">
+											<div class="instructor-info">
+												<div class="instructor-name">Grant Norris</div>
+												<div class="instructor-desc">
+													<p>Create high ranking websites that offer a real return on investment.</p>
+												</div>
+												<a href="#" class="see-all">All Courses</a>
+											</div>
+											<div class="row no-gutters">
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-student">
+														<h4>356</h4>
+														<span>Student</span>
+													</div>
+												</div>	
+												<div class="col-md-6 light-gray-bg">
+													<div class="block-courses">
+														<h4>22</h4>
+														<span>Courses</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="block-teacher-img">
+												<img src="assets/images/img_feature_teacher_02.jpg" alt="" class="img-responsive block-img">
+												<div class="row block-courses-img">
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+																<img src="assets/images/img_feature_teacher_article_01.jpg" alt="">
+																<span>The complete Developer Course 2.0</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="course-detail">
+															<a href="#">
+															<img src="assets/images/img_feature_teacher_article_02.jpg" alt="">
+															<span>The complete Developer Course 2.0</span>
+														</a>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
 
 
 
@@ -355,9 +917,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/tooltipster.bundle.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			 $(".trending-courses-items").owlCarousel({
+			 $(".carousel-x-courses-items").owlCarousel({
 			 	items:4,
 			 	margin:10,
 			 	nav:true,
@@ -383,6 +946,16 @@
 			 			$('.prev').hide();
 			 		}
 			 	}
+			 });
+			 //Popover
+			 $('.instructor-container').owlCarousel({
+			 	items:1,
+			 	autoWidth:true,
+			 	margin:20,
+			 	dots:false,
+			 	smartSpeed:700,
+			 	nav:true,
+			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
 			 });
 		});
 	</script>
