@@ -48,10 +48,10 @@
 						<div class="user-group ml-auto">
 							<div class="user-wrapper">
 								<div class="user-login">
-									<a href="#"><img src="assets/images/user-icon.png" alt="">Login</a>
+									<a href="#" data-toggle="modal" data-target="#loginModal"><img src="assets/images/user-icon.png" alt="">Login</a>
 								</div>
 								<div class="user-sign-up">
-									<a href="#">Sign Up</a>
+									<a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
 								</div>
 							</div>
 						</div>
@@ -59,6 +59,41 @@
 				</nav>
 			</div>
 		</nav>
+		<!--Login Modal -->
+		<div id="loginModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="login-wrapper text-center">
+							<h1>Start Learning</h1>
+							<a href="#" class="btn btn-general btn-blue"><i class="fa fa-facebook"></i><span>Login With FaceBook</span></a>
+							<a href="#" class="btn btn-general btn-red"><i class="fa fa-google"></i><span>Login With Google</span></a>
+							<a href="#" class="btn btn-general btn-light-blue"><i class="fa fa-linkedin"></i><span>Login With Linkedin</span></a>
+							<hr class="or-divider">
+							<form action="" class="text-left">
+								<div class="form-group">
+									<label for="email">Email address:</label>
+									<input type="email" class="form-control" id="email">
+								</div>
+								<div class="form-group">
+									<label for="pwd">Password:</label>
+									<input type="password" class="form-control" id="pwd">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox"> Remember me</label>
+									<br>
+									<a href="#">Forgot password ?</a>
+								</div>
+								<button class="btn btn-login">Login</button>
+							</form>
+							<h3>Don't have an account? <a href="#">Sign Up</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 	<div class="wl-main-content">
 		<!-- Hero Section -->
