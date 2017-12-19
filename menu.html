@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>| WeLearn</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/images/WeLearn_Round.png">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Own Carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	<!-- Tool Tipster -->
+	<link rel="stylesheet" href="assets/css/tooltipster.bundle.min.css">
+</head>
+<body>
+	<!-- Header -->
+	<a href="#menu" class="menu-link">Menu</a>
+        
+        <nav class="menu">
+            <ul>
+                <li class="has-sub-menu"><a href="#">main menu 1</a>
+                    <ul class="sub-menu">
+                         <li><a href="#">sub menu 1</a></li>
+                         <li class="has-sub-menu">
+                            <a href="#">sub menu 2</a>
+                            <ul>
+                                <li><a href="#">sub sub menu 1</a></li>
+                                <li><a href="#">sub sub menu 2</a></li>
+                            </ul>
+                         </li>
+                         <li><a href="#">sub menu 3</a></li>
+                         <li><a href="#">sub menu 4</a></li>
+                         <li><a href="#">sub menu 5</a></li>
+                         <li><a href="#">sub menu 6</a></li>
+                         <li><a href="#">sub menu 7</a></li>
+                         <li><a href="#">sub menu 8</a></li>
+                         <li><a href="#">sub menu 9</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/tooltipster.bundle.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			 $(".carousel-x-courses-items").owlCarousel({
+			 	items:4,
+			 	margin:10,
+			 	nav:true,
+			 	dots:false,
+			 	smartSpeed:500,
+			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
+			 	afterAction: function(){
+			 		if ( this.itemsAmount > this.visibleItems.length ) {
+			 			$('.next').show();
+			 			$('.prev').show();
+
+			 			$('.next').removeClass('disabled');
+			 			$('.prev').removeClass('disabled');
+			 			if ( this.currentItem == 0 ) {
+			 				$('.prev').css("display","none");
+			 			}
+			 			if ( this.currentItem == this.maximumItem ) {
+			 				$('.next').addClass('display');
+			 			}
+
+			 		} else {
+			 			$('.next').hide();
+			 			$('.prev').hide();
+			 		}
+			 	}
+			 });
+			 //Popover
+			 $('.instructor-container').owlCarousel({
+			 	items:1,
+			 	autoWidth:true,
+			 	margin:20,
+			 	dots:false,
+			 	smartSpeed:700,
+			 	nav:true,
+			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
+			 });
+		});
+	</script>
+</body>
+</html>
