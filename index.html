@@ -26,37 +26,49 @@
 	<!-- Header -->
 	<header>
 		<!-- Navbar -->
-		<nav class="navbar-wrapper fixed-top">
-			<div class="container-fluid">
-				<nav class="navbar navbar-expand-md navbar-light">
-					<a class="navbar-brand" href="#"><img src="assets/images/WeLearn_Horizontal.svg" alt="Logo"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="main-navbar">
-						<div class="menu-catalog">
-							<div class="catalog-icon">
-								<img src="assets/images/catalog-icon.png" alt="Catalog Icon">
-								<span>Course Catalog</span>
-							</div>
+		<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-wrapper">
+			<a class="navbar-brand" href="#"><img src="assets/images/WeLearn_Horizontal.svg" alt="Logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main-navbar">
+				<div class="menu-nav">
+					<ul>
+						<li class="btn-catalog"><span>Course Catalog</span>
+							<ul>
+								<li><a href="#">Hight-Tech</a></li>
+								<li><a href="#">Marketing</a>
+									<ul class="has-sub">
+										<li><a href="#">Digital Marketing</a></li>
+										<li><a href="#">Search Engine Optimisation</a></li>
+										<li><a href="#">Social Media Marketing</a></li>
+										<li><a href="#">Branding</a></li>
+										<li><a href="#">Advertising</a></li>
+										<li><a href="#">All Marketing</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Creative</a></li>
+								<li><a href="#">Seft-Development</a></li>
+								<li><a href="#">Eclectic</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<form class="form-inline my-2 my-lg-0 mr-auto">
+					<input class="search-form simplebox form-control mr-sm-2" type="search" placeholder="Find a course..." aria-label="Search">
+					<a class="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+				</form>
+				<div class="user-group ml-auto">
+					<div class="user-wrapper">
+						<div class="user-login">
+							<a href="#" data-toggle="modal" data-target="#loginModal"><img src="assets/images/user-icon.png" alt="">Login</a>
 						</div>
-						<form class="form-inline my-2 my-lg-0">
-							<input class="search-form simplebox form-control mr-sm-2" type="search" placeholder="Find a course..." aria-label="Search">
-							<a class="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-						</form>
-						<div class="user-group ml-auto">
-							<div class="user-wrapper">
-								<div class="user-login">
-									<a href="#" data-toggle="modal" data-target="#loginModal"><img src="assets/images/user-icon.png" alt="">Login</a>
-								</div>
-								<div class="user-sign-up">
-									<a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
-								</div>
-							</div>
+						<div class="user-sign-up">
+							<a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
 						</div>
 					</div>
-				</nav>
+				</div>
 			</div>
 		</nav>
 		<!--Login Modal -->
