@@ -61,15 +61,19 @@ h1, h2, h3, h4, h5, h6 {
 .search-form {
 	border-radius: 0px;
 	background-color: #eaeaea;
-	min-width: 300px !important;
 	margin-right: 0px !important;
     padding: 10px 15px;
     border: 2px solid #eaeaea;
 }
 .search-btn i {
-	background-color: #2281e7;
 	color: #fff;
 	padding: 15px 20px;
+}
+.search-btn {
+	background-color: #2281e7;
+}
+.search-btn:hover {
+	background-color: #3496FF;
 }
 .simplebox {
   outline: none;
@@ -82,31 +86,73 @@ h1, h2, h3, h4, h5, h6 {
 	width: auto;
 	display: flex;
 }
-.user-login {
-	display: inline-block;
+.btn-animate {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+	overflow: hidden;
+}
+.btn-animate a {
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+	display: block;
+	/*padding: 22px 30px;*/
+	/*font-weight: 500;*/
+	border: none;
+	outline: none;
+}
+.btn-animate::before, .btn-animate::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: rgba(13, 12, 12, 0.1);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-transform: translate(0,-100%);
+	transform: translate(0,-100%);
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.btn-animate::after{
+	-webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.2s;
+}
+.btn-animate:hover::before, .btn-animate:hover::after{
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
 }
 .user-login a {
-	text-decoration: none;
-	color: #2e2f33;
-	padding: 27px 30px;
+	padding: 22px 30px;
 	font-weight: 500;
 }
-.user-login a:hover {
-	background-color: #F4F4F4;
+.user-login:hover::before, .user-login:hover::after{
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
 }
 .user-login a img {
 	padding-right: 10px;
 	padding-bottom: 5px;
 }
 .user-sign-up {
-	display: inline-block;
+	position: relative;
 }
 .user-sign-up a {
 	text-decoration: none;
 	color: #fff;
 	background-color: #2281e7;
-	padding: 27px 30px;
+	padding: 24px 30px;
 	font-weight: 500;
+}
+.user-sign-up a:hover {
+	background-color: #3496FF;
 }
 /*========================================
 				Modal
@@ -266,8 +312,11 @@ hr.or-divider:after {
 .banner-form .search-btn  i {
 	background-color: #2281e7;
     color: #fff;
-    padding: 22px 29px;
+    padding: 22px 29px;search-btn
     font-size: 20px;
+}
+.banner-form .search-btn i:hover {
+	background-color: #3496FF;
 }
 /*========================================
 				Feature Section
@@ -553,6 +602,7 @@ hr.or-divider:after {
 }
 .footer-title ul li a:hover {
 	text-decoration: none;
+	color: #fff;
 }
 .icon-list {
 	display: flex;
@@ -588,6 +638,7 @@ hr.or-divider:after {
 	border-right: 1px solid #e0e0e1;
 	padding: 22px 20px;
 	margin-right: 20px;
+	font-weight: 500;
 }
 .btn-catalog:before {
 	background: url('../images/catalog-icon.png') no-repeat bottom;
@@ -631,7 +682,7 @@ hr.or-divider:after {
 	float: left;
 }
 
-.menu-nav ul li:hover { background: #f4f4f4; }
+/*.menu-nav ul li:hover { background: #f4f4f4; }*/
 
 .menu-nav ul li:hover a { color: #2d2e33; }
 
@@ -653,16 +704,22 @@ hr.or-divider:after {
 }
 
 .menu-nav ul ul li {
-	border-bottom: 1px solid #e8eef0;
     float: none;
 }
-
+.menu-nav ul ul li:first-child {
+    padding-top: 1em;
+}
+.menu-nav ul ul li:last-child a {
+    border-bottom: none;
+}
 .menu-nav ul ul li a {
 	color: #2d2e33;
 	text-align:left;
-	padding: 10px 20px;
+	padding: 10px 0;
+	margin:0 25px;
 	font-size: 14px;
 	font-weight: 500;
+	border-bottom: 1px solid #DCDCDC;
 }
 
 .menu-nav ul ul li a:hover {
@@ -673,6 +730,17 @@ hr.or-divider:after {
 	position: absolute;
 	left: 100%;
 	top:0;
-	background-color: #f4f4f4;
-	color: #f4f4f4;
+	background-color: #37383d;
+}
+.menu-nav ul ul ul li a {
+	color: #aeafb0 !important;
+	border-bottom: 1px solid #606060;
+}
+.menu-nav ul ul ul li a:hover {
+	color: #fff !important;
+}
+.menu-nav ul ul ul li:last-child a {
+	border-bottom: none;
+	float: right;
+}
 }
