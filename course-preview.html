@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>| WeLearn</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/images/WeLearn_Round.png">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Own Carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	<!-- WebUI Popover -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
+	<!-- Hover -->
+	<link rel="stylesheet" href="assets/css/hover-min.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-wrapper">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/WeLearn_Horizontal.svg" alt="Logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main-navbar">
+				<div class="menu-nav">
+					<ul>
+						<li class="btn-catalog"><span>Course Catalog</span>
+							<ul>
+								<li><a href="#">Hight-Tech</a></li>
+								<li><a href="#">Marketing</a>
+									<ul>
+										<li><a href="#">Digital Marketing</a></li>
+										<li><a href="#">Search Engine Optimisation</a></li>
+										<li><a href="#">Social Media Marketing</a></li>
+										<li><a href="#">Branding</a></li>
+										<li><a href="#">Advertising</a></li>
+										<li><a href="#">All Marketing</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Creative</a></li>
+								<li><a href="#">Seft-Development</a></li>
+								<li><a href="#">Eclectic</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<form class="d-flex my-2 my-lg-0 mr-auto" style="width: 40%">
+					<input class="search-form simplebox form-control mr-sm-2" type="search" placeholder="Find a course..." aria-label="Search">
+					<a class="search-btn hvr-fade" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+				</form>
+				<div class="user-group ml-auto">
+					<div class="user-wrapper">
+						<div class="user-login btn-animate">
+							<a href="#" data-toggle="modal" data-target="#loginModal"><img src="assets/images/user-icon.png" alt="">Login</a>
+						</div>
+						<div class="user-sign-up btn-animate">
+							<a href="#" class="hvr-fade" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--Login Modal -->
+		<div id="loginModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="modal-wrapper text-center">
+							<h1>Start Learning</h1>
+							<a href="#" class="btn btn-general btn-blue"><i class="fa fa-facebook"></i><span>Login With FaceBook</span></a>
+							<a href="#" class="btn btn-general btn-red"><i class="fa fa-google"></i><span>Login With Google</span></a>
+							<a href="#" class="btn btn-general btn-light-blue"><i class="fa fa-linkedin"></i><span>Login With Linkedin</span></a>
+							<hr class="or-divider">
+							<form action="" class="text-left">
+								<div class="form-group">
+									<label class="font-weight-b" for="email">Email address:</label>
+									<input type="email" class="form-control">
+								</div>
+								<div class="form-group">
+									<label class="font-weight-b" for="pwd">Password:</label>
+									<input type="password" class="form-control">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox"> Remember me</label>
+									<br>
+									<a href="#">Forgot password ?</a>
+								</div>
+								<button class="btn btn-login">Login</button>
+							</form>
+							<h3>Don't have an account? <a class="sign-up-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Sign Up Modal -->
+		<div id="signUpModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="modal-wrapper text-center">
+							<h1>Challenge Yourself</h1>
+							<p>Share your knowledge. Make a difference. Build a following.</p>
+							<a href="#" class="btn btn-general btn-blue"><i class="fa fa-facebook"></i><span>Signup With FaceBook</span></a>
+							<a href="#" class="btn btn-general btn-red"><i class="fa fa-google"></i><span>Signup With Google</span></a>
+							<a href="#" class="btn btn-general btn-light-blue"><i class="fa fa-linkedin"></i><span>Signup With Linkedin</span></a>
+							<hr class="or-divider">
+							<h4>Signup With Email</h4>
+							<form action="" class="text-left">
+								<div class="form-group">
+									<label class="font-weight-b" for="email">Email address:</label>
+									<input type="email" class="form-control" id="email">
+								</div>
+								<div class="form-group">
+									<label class="font-weight-b" for="pwd">Password:</label>
+									<input type="password" class="form-control" id="pwd">
+								</div>
+								<button class="btn btn-login">Signup</button>
+							</form>
+							<h3>Already have an account? <a class="login-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wl-main-content">
+		<!-- Course Head 1 Section -->
+		<section class="course-head-1">
+			<div class="course-head-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="course-head-img">
+								<img class="img-responsive" src="assets/images/img_thumb_01.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-md-6 pl-md-0">
+							<div class="course-name mb-2"><a href="#">Web Developer</a></div>
+							<div class="course-title">The Complete Metadata Bootcamp</div>
+							<div class="course-desc"><p>Create high ranking websites that offer real return on investment in double quick time.</p></div>
+							<ul class="rate-block list-inline">
+								<li>
+									<ul class="list-inline">
+										<li><i class="fa fa-star font-orange" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star font-orange" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star font-orange" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star-half-o font-orange" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+									</ul>
+								</li>
+								<li><span class="point-rate"><em class="font-white">3.2</em>(115 ratings)</span></li>
+							</ul>
+							<ul class="author-block list-inline">
+								<li>
+									<ul class="list-inline">
+										<li>Created by <a href="#" class="link font-white">Tim Stevens</a></li>
+										<li>112 Students</li>
+										<li>Beginner Level</li>
+									</ul>
+								</li>
+							</ul>
+						</div>	
+						<div class="col-md-3">
+							<span class="course-tag">Tags: </span>
+							<ul class="course-tag-list">
+								<li>Excel</li>
+								<li>Productivity</li>
+								<li>Microsoft-Office</li>
+								<li>Office 365</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Course Head 2 Section -->
+		<section class="course-head-2">
+			<div class="course-head-2-wrapper">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3 col-sm-2 border-right p-3">
+							<h3><span class="course-price">$ FREE</span></h3>
+						</div>
+						<div class="col-md-6 p-3">
+							<a class="save-whishlist" href="#"><i class="fa fa-heart-o" aria-hidden="true"></i><small>Save to wishlist</small></a>
+						</div>
+						<div class="col-md-3 p-3">
+							<a href="#" class="btn btn-02 mr-2">Preview Course</a>
+							<a href="#" class="btn btn-03">Enroll</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Course Goal Section -->
+		<section class="course-goal">
+			<div class="container-fluid">
+				<div class="course-wrapper">
+					<div class="row">
+						<div class="col-sm-12 col-md-10 offset-md-1">
+							<div class="course-preview-title">Course Goal</div>
+							<div class="course-content">
+								<img class="course-content-icon" src="assets/images/icon_course_01.jpg" alt="Icon Course">
+								<p>Upon completion of this course, you should have a complete working knowledge of how to implement metadata on your websites so that they rank high in Google, Youtube, and Facebook</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr>
+		<!-- Course Benefits Section -->
+		<section class="course-benefits">
+			<div class="container-fluid">
+				<div class="course-wrapper">
+					<div class="row">
+						<div class="col-sm-12 col-md-10 offset-md-1">
+							<div class="course-preview-title">Course Benefits</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+									<div class="course-content">
+										<img class="course-content-icon" src="assets/images/icon_course_02.jpg" alt="Icon Course">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Course Description Section -->
+		<section class="course-description">
+			<div class="container-fluid">
+				<div class="course-wrapper">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<div class="course-preview-title">Course Description</div>
+							<div class="read-content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Module Preview Section -->
+		<section class="course-module">
+			<div class="container-fluid">
+				<div class="course-wrapper">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<div class="course-module-head d-flex justify-content-between">
+								<div class="course-preview-title">Module Preview</div>
+								<div class="course-count pt-3">10 Modules</div>
+							</div>
+							<div class="course-module-content">
+								<ul class="accordion-block">
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>VIDEO</small></a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>Donwnload</small></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>Donwnload</small></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>Donwnload</small></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>VIDEO</small></a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>VIDEO</small></a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>VIDEO</small></a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+									<li>
+										<div class="accordion-head">
+											<div class="container">
+												<div class="row row-head reverse">
+													<div class="col-sm-1 col-label">
+														<span class="toggle-label"></span>
+													</div>
+													<div class="col-sm-8 col-md-9 col-title">
+														<div class="title-block">
+															<h3 class="font-white">Introduction to this Course</h3>
+															<span>Learn about why metadata is useful, and who this course will help most.</span>
+														</div>
+													</div>
+													<div class="col-sm-3 col-md-2 col-link">
+														<a href="#"><small>VIDEO</small></a>
+													</div>
+													
+												</div>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Student Preview Section -->
+		<section class="student-preview">
+			<div class="container-fluid">
+				<div class="course-wrapper">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<div class="course-preview-title">Student Preview</div>
+							<div class="rating-summary">
+							<div class="row">
+								<div class="col-average col-xs-12 col-sm-3">
+									<div class="rate-box">
+										<div class="rate-content">
+											<p>Average Rating</p>
+											<span class="rate">3.2</span>
+										</div>
+										<div class="rate-stars">
+											<ul class="list-inline">
+												<li><i class="fa fa-star fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-half-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-rating col-sm-9">
+									<div class="row">
+										<div class="col-bars col-xs-7 col-sm-8">
+											<div class="progress">
+												<span style="width: 45%;"></span>
+											</div>
+										</div>
+										<div class="col-stars col-xs-5 col-sm-4">
+											<ul class="list-inline">
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+											</ul>
+											<span>32%</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-bars col-xs-7 col-sm-8">
+											<div class="progress">
+												<span style="width: 70%;"></span>
+											</div>
+										</div>
+										<div class="col-stars col-xs-5 col-sm-4">
+											<ul class="list-inline">
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-half-o fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+											</ul>
+											<span>70%</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-bars col-xs-7 col-sm-8">
+											<div class="progress">
+												<span style="width: 7%;"></span>
+											</div>
+										</div>
+										<div class="col-stars col-xs-5 col-sm-4">
+											<ul class="list-inline">
+												<li><i class="fa fa-star fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-half-o fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+											</ul>
+											<span>7%</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-bars col-xs-7 col-sm-8">
+											<div class="progress">
+												<span style="width: 2%;"></span>
+											</div>
+										</div>
+										<div class="col-stars col-xs-5 col-sm-4">
+											<ul class="list-inline">
+												<li><i class="fa fa-star-half-o fa-lg font-orange" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+											</ul>
+											<span>2%</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-bars col-xs-7 col-sm-8">
+											<div class="progress">
+												<span style="width: 0%;"></span>
+											</div>
+										</div>
+										<div class="col-stars col-xs-5 col-sm-4">
+											<ul class="list-inline">
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o fa-lg" aria-hidden="true"></i></li>
+											</ul>
+											<span>0%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>	
+		</section>
+	</div>
+	<footer>
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 offset-md-2 text-center">
+						<div class="footer-title">
+							<span>Company</span>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Press</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Testiominals</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<a href="#">
+							<img src="assets/images/footer_logo.png" alt="">
+						</a>
+						<ul class="icon-list">
+							<li><a href="#"><i class="fa fa-facebook icon-bg-dark"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter icon-bg-light"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram icon-bg-dark"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube-play icon-bg-light"></i></a></li>
+						</ul>
+					</div>	
+					<div class="col-md-2 text-center">
+						<div class="footer-title">
+							<span>Policies</span>
+							<ul>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">Pricing</a></li>
+								<li><a href="#">Intellectual Property</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright text-center">
+			<span>© Pendragon Labs LLC. 2017</span>
+		</div>
+	</footer>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+	<script type="text/javascript" src="assets/js/readmore.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			 $(".carousel-x-courses-items").owlCarousel({
+			 	items:4,
+			 	margin:10,
+			 	nav:true,
+			 	dots:false,
+			 	smartSpeed:500,
+			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
+			 	afterAction: function(){
+			 		if ( this.itemsAmount > this.visibleItems.length ) {
+			 			$('.next').show();
+			 			$('.prev').show();
+
+			 			$('.next').removeClass('disabled');
+			 			$('.prev').removeClass('disabled');
+			 			if ( this.currentItem == 0 ) {
+			 				$('.prev').css("display","none");
+			 			}
+			 			if ( this.currentItem == this.maximumItem ) {
+			 				$('.next').addClass('display');
+			 			}
+
+			 		} else {
+			 			$('.next').hide();
+			 			$('.prev').hide();
+			 		}
+			 	}
+			 });
+			 //Instructor Carousel
+			
+			 //Show 1 modal
+			 $('.sign-up-link').click(function(){
+			 	$('#loginModal').removeClass("fade").modal("hide");
+			 });
+			  $('.login-link').click(function(){
+			 	$('#signUpModal').removeClass("fade").modal("hide");
+			 });
+			  //WebUI Popover
+			  $('.card').webuiPopover({
+			  	placement:'right',
+			  	trigger:'hover',
+			  	animation:'pop',
+			  	width:360,
+			  });
+			  //
+			  $('.accordion-block li').first().addClass('active').find('.accordion-body').slideDown();
+			  $('.accordion-block .accordion-head').click(function(event) {
+			  	if ($(this).parent().hasClass('active')) {
+			  		$(this).parent().removeClass('active');
+			  	} else {
+			  		$('.accordion-block li.active').removeClass('active').find('.accordion-body').slideToggle();
+			  		$(this).parent().addClass('active');
+			  	}
+			  	$(this).next().slideToggle();
+			  });
+
+			  //Read More
+			  $('.read-content').readmore({
+			  	speed: 300,
+			  	collapsedHeight: 315,
+			  	heightMargin: 24,
+			  	moreLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x fa-inverse"></i></span>Read More</a>',
+			  	lessLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span>Read Less</a>',
+			  	startOpen: false,
+			  	blockProcessed: function() {},
+			  	beforeToggle: function(){},
+			  	afterToggle: function(){}
+			  });
+			  //Read More Module Section
+			  var itemHeight01 = $('.course-module-content li').height() * 8;
+
+			  $('.course-module-content').readmore({
+			  	speed: 300,
+			  	collapsedHeight: itemHeight01,
+			  	heightMargin: 24,
+			  	moreLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x fa-inverse"></i></span>LOAD MORE</a>',
+			  	lessLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span>Collapse</a>',
+			  	startOpen: false,
+
+				blockProcessed: function() {},
+				beforeToggle: function(){},
+				afterToggle: function(){}
+			});
+		});
+	</script>
+</body>
+</html>
