@@ -24,6 +24,18 @@ a:hover {
 ul li {
 	list-style: none;
 }
+.btn-01 { 
+	color: #fff; 
+	background: #2281e7; 
+	border-radius: 0;
+}
+.btn-01:hover { 
+	background: #3496ff; 
+	color: #fff 
+}
+.btn-01.hover-01:hover { 
+	background: #ffa414; 
+}
 .btn-02 {
 	background-color: transparent;
 	color: #fff;
@@ -35,13 +47,13 @@ ul li {
 	color: #fff;
 }
 .btn-03 {
-	background-color: #FFB300;
+	background-color: #ff8614;
 	border-radius: 0;
 	color: #fff;
 	width: 140px;
 }
 .btn-03:hover {
-	background-color: #FFD54F;
+	background-color: #ff912a;
 	color: #fff;
 }
 .font-orange {
@@ -52,6 +64,10 @@ ul li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+}
+.form-control.error {background: #ffe4e6; border-color: #e27078;}
+.bg-white {
+	background-color: #fff;
 }
 /*========================================
 			Navbar
@@ -89,10 +105,7 @@ ul li {
 	margin-right: 5px;
 }
 .search-form {
-	border-radius: 0px;
-	background-color: #eaeaea;
 	margin-right: 0px !important;
-    padding: 10px 15px;
     border: 2px solid #eaeaea;
 }
 .search-btn i {
@@ -108,6 +121,9 @@ ul li {
 .simplebox {
   outline: none;
   border: 1px solid #eaeaea !important;
+  background-color: #eaeaea;
+  border-radius: 0;
+  padding: 10px 15px;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
@@ -921,10 +937,13 @@ hr.or-divider:after {
 .course-tag-list {
 	margin-top: 20px;
 }
-.course-tag-list li {
+.course-tag-list li a {
 	list-style: none;
 	font-size: 14px;
 	color: rgba(255,255,255,0.6); 
+}
+.course-tag-list li a:hover {
+	color: #fff;
 }
 /*========================================
 			Course Head 2
@@ -1232,6 +1251,12 @@ hr.or-divider:after {
 .other-course-link {
 	background-color: #f4f4f4;
 	margin-bottom: 20px;
+}.other-course-link:hover {
+	background-color: #fff;
+	/*box-shadow: 0px 0px 5px #444*/
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 .instructor-img {
 	width: 40%;
@@ -1562,7 +1587,288 @@ table tbody tr:nth-child(even) {
     text-align: right;
   }
 }
+/*========================================
+			Create Course
+=========================================*/
+.create-course-container {
+	padding: 120px 0;
+}
+.form-set .steps {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.form-set .steps ul {
+  list-style-type: none;
+  margin: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.form-set .steps ul li {
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  -o-flex: 1 0 0;
+  flex: 1 0 0;
+}
+.form-set .steps ul li .current-info,
+.form-set .item-title {
+  display: none;
+}
+.form-head {
+	margin: 50px 0;
+}
+.form-head h2 {
+	color: rgba(46,47,51,1);
+	font-size: 46px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.form-head p {
+	color: rgba(46,47,51,0.7);
+	font-size: 24px;
+}
+.form-block {
+	margin: 50px 0;
+}
+.form-block legend {
+	font-size: 32px;
+	font-weight: bold;
+}
+.field-block {
+	margin: 20px 0;
+}
+.field-block label {
+	font-weight: 500;
+	display: block;
+}
+.custom-selectbox {
+	height: calc(45px + 2px) !important;
+}
+.select-icon select {
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+ }
+ .select-icon select::-ms-expand {
+    display: none;
+}
+.select-icon:after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    font-size: 28px;
+    color: #7d7e81;
+    right: 38px;
+    top: 53px;
+    position: absolute;
+    pointer-events:none;
+}
+.span-desc {
+	font-size: 14px;
+	color: #828384;
+}
+.form-set .field-row.has-value .form-control {
+  background: #fff;
+}
+.form-set .field-row .btn-toggle {
+  position: relative;
+  width: 3.5em;
+  background: #2281e7;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 0;
+  outline: none;
+  border: none;
+}
+.form-set .field-row .btn-toggle i {
+  position: relative;
+  display: block;
+  width: 1.8em;
+  height: 1px;
+  background: #fff;
+}
+.form-set .field-row .btn-toggle:not(.btn-minus) i:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.form-set .field-row .btn-toggle:hover {
+  background: #348ae7;
+}
+.form-set .field-row .btn-toggle.btn-minus {
+  background: #565659;
+}
+.form-set .field-row .btn-toggle.btn-minus:hover {
+  background: #6c6c6f;
+}
+.form-set .field-row + .field-row {
+  margin-top: 10px;
+}
+.custom-file {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.custom-file + label {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 5px 5px 5px 0.75em;
+  background: #f4f4f4;
+  border: 1px solid #e0e0e1;
+}
+.custom-file.error + label {
+  background: #ffe4e6;
+  border-color: #e27078;
+}
+.custom-file + label .file-name {
+  flex-grow: 1;
+  color: #2e2f33;
+  font-weight: 400;
+}
+.form-set .actions ul {
+  margin-top: 50px;
+  list-style-type: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+.form-set .actions ul li .btn {
+  font-size: 1.125em;
+  padding: 0.75em 1.75em 0.625em;
+}
+.form-set .actions ul li .btn-02 {
+  border-color: #bcd9f8;
+  color: #2281e7;
+}
+.form-set .actions ul li .btn-02:hover {
+  border-color: #2281e7;
+}
+.form-set .actions ul li a[href='#save'] {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2281e7;
+  letter-spacing: 1px;
+}
+.form-set .actions ul li a[href='#save']:hover {
+  color: rgba(46,47,51,1);
+}
+.module-block {
+	background-color: #f4f4f4;
+	padding: 30px;
+}
+.module-add-row {
+	background-color: #f4f4f4;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-text {
+	padding-left: 30px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.module-btn {
+	padding: 15px 20px;
+	border-left: 1px solid #e0e0e1;
+}
+@media only screen and (min-width: 768px) {
+  .form-set .steps ul li a,
+  .form-set .steps ul li.current ~ li.done a {
+    display: block;
+    width: 100%;
+    border-bottom: 0.25em solid #eaeaea;
+    font-size: 1.25em;
+    padding: 0.325em 0;
+    color: #828384;
+    outline: 0;
+  }
+  .form-set .steps ul li.current a,
+  .form-set .steps ul li.done a {
+    font-weight: 700;
+    border-bottom-color: #2281e7;
+    color: #2e2f33;
+  }
+}
+@media only screen and (max-width: 1199px) and (min-width: 1024px) {
+  .form-set .steps ul li a, .form-set .steps ul li.current ~ li.done a {
+    font-size: 1.125em;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .form-set .form-head {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .form-set .form-body {
+    padding-top: 1.75em;
+  }
 
+  .form-set .form-block {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+  }
+  .form-set .steps {
+    padding: 0 10px;
+  }
+  .form-set .steps ul {
+    position: relative;
+  }
+  .form-set .steps ul li {
+    margin: 0 5px;
+    padding: 0;
+  }
+  .form-set .steps ul li:not(.current) a {
+    display: none;
+  }
+
+  .form-set .steps ul li, .form-set .steps ul li.current ~ li.done {
+    border-bottom: 0.25em solid #eaeaea;
+  }
+  .form-set .steps ul li.current, .form-set .steps ul li.done {
+    font-weight: 700;
+    border-bottom-color: #2281e7;
+  }
+  .form-set .steps ul li.current a {
+    position: absolute;
+    top: -1.75em;
+    left: 5px;
+    font-size: 14px;
+  }
+  
+}
 /*========================================
 			Read More
 =========================================*/

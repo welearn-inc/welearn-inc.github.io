@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>| WeLearn</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/images/WeLearn_Round.png">
+	<!-- Normalize -->
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Own Carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	<!-- WebUI Popover -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
+	<!-- Hover -->
+	<link rel="stylesheet" href="assets/css/hover-min.css">
+</head>
+<body>
+	<!-- Header -->
+	<header>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-wrapper">
+			<a class="navbar-brand" href="index.html"><img src="assets/images/WeLearn_Horizontal.svg" alt="Logo"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main-navbar">
+				<div class="menu-nav">
+					<ul>
+						<li class="btn-catalog"><span>Course Catalog</span>
+							<ul>
+								<li><a href="#">Hight-Tech</a></li>
+								<li><a href="#">Marketing</a>
+									<ul>
+										<li><a href="#">Digital Marketing</a></li>
+										<li><a href="#">Search Engine Optimisation</a></li>
+										<li><a href="#">Social Media Marketing</a></li>
+										<li><a href="#">Branding</a></li>
+										<li><a href="#">Advertising</a></li>
+										<li><a href="#">All Marketing</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Creative</a></li>
+								<li><a href="#">Seft-Development</a></li>
+								<li><a href="#">Eclectic</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<form class="d-flex my-2 my-lg-0" style="width: 40%">
+					<input class="search-form simplebox form-control mr-sm-2" type="search" placeholder="Find a course..." aria-label="Search">
+					<a class="search-btn hvr-fade" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+				</form>
+				<div class="side-left d-flex flex-row ml-auto align-self-stretch">
+					<div class="create-btn btn-animate">
+						<a class="align-self-center" href="#">Create a Course</a>
+					</div>
+					<div class="profile-btn btn-animate">
+						<img src="assets/images/user_profile_login_01.jpg" alt="">
+						<a href="#">Scott</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--Login Modal -->
+		<div id="loginModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="modal-wrapper text-center">
+							<h1>Start Learning</h1>
+							<a href="#" class="btn btn-general btn-blue"><i class="fa fa-facebook"></i><span>Login With FaceBook</span></a>
+							<a href="#" class="btn btn-general btn-red"><i class="fa fa-google"></i><span>Login With Google</span></a>
+							<a href="#" class="btn btn-general btn-light-blue"><i class="fa fa-linkedin"></i><span>Login With Linkedin</span></a>
+							<hr class="or-divider">
+							<form action="" class="text-left">
+								<div class="form-group">
+									<label class="font-weight-b" for="email">Email address:</label>
+									<input type="email" class="form-control">
+								</div>
+								<div class="form-group">
+									<label class="font-weight-b" for="pwd">Password:</label>
+									<input type="password" class="form-control">
+								</div>
+								<div class="checkbox">
+									<label><input type="checkbox"> Remember me</label>
+									<br>
+									<a href="#">Forgot password ?</a>
+								</div>
+								<button class="btn btn-login">Login</button>
+							</form>
+							<h3>Don't have an account? <a class="sign-up-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Sign Up Modal -->
+		<div id="signUpModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<div class="modal-wrapper text-center">
+							<h1>Challenge Yourself</h1>
+							<p>Share your knowledge. Make a difference. Build a following.</p>
+							<a href="#" class="btn btn-general btn-blue"><i class="fa fa-facebook"></i><span>Signup With FaceBook</span></a>
+							<a href="#" class="btn btn-general btn-red"><i class="fa fa-google"></i><span>Signup With Google</span></a>
+							<a href="#" class="btn btn-general btn-light-blue"><i class="fa fa-linkedin"></i><span>Signup With Linkedin</span></a>
+							<hr class="or-divider">
+							<h4>Signup With Email</h4>
+							<form action="" class="text-left">
+								<div class="form-group">
+									<label class="font-weight-b" for="email">Email address:</label>
+									<input type="email" class="form-control" id="email">
+								</div>
+								<div class="form-group">
+									<label class="font-weight-b" for="pwd">Password:</label>
+									<input type="password" class="form-control" id="pwd">
+								</div>
+								<button class="btn btn-login">Signup</button>
+							</form>
+							<h3>Already have an account? <a class="login-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wl-main-content">
+		<div class="container-fluid">
+			<div class="create-course-container">
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<form action="#" id="form-create-course">
+							<div class="form-set">
+								<!-- Step 1 -->
+								<span class="item-title">Course Details</span>
+								<div class="form-item">
+									<div class="form-head">
+										<h2>Create A New Course</h2>
+										<p>Once we verifiy your course, and if you meet the standards, we’ll publish it.</p>
+									</div>
+									<hr>
+									<div class="form-body">
+										<div class="form-block">
+											<legend>Course Title</legend>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="course-title">Title *</label>
+														<div class="field">
+															<div class="select">
+																<input id="course-title" name="course_title" class="simplebox form-control mb-2" type="text" maxlength="50">
+																<span class="span-desc">50 character limit</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="course-subtitle">SubTitle *</label>
+														<div class="field">
+															<div class="select">
+																<input id="course-subtitle" class="simplebox form-control mb-2" name="course_subtitle" type="text" maxlength="100">
+																<span class="span-desc">100 character limit</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="field-block">
+														<label for="course-subtitle">Topic *</label>
+														<div class="field">
+															<div class="select-icon">
+																<!-- <input id="course-topic" class="simplebox form-control mb-2" name="course_topic" type="text"> -->
+																
+																<select class="simplebox custom-selectbox form-control" id="course-topic" title="aaa">
+																	<option>Choose a topic</option>
+																	<option>Topic 1</option>
+																	<option>Topic 2</option>
+																	<option>Topic 3</option>
+																	<option>Topic 4</option>
+																	<option>Topic 5</option>
+																</select>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="field-block">
+														<label for="course-subtitle">Tag *</label>
+														<div class="field">
+															<div class="select">
+																<input id="course-tag" class="simplebox form-control mb-2" name="course_tag" type="text" placeholder="Seperate tags with comma’s">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<div class="form-block">
+											<legend>The Basics</legend>
+											<div class="row">
+												<div class="col-md-4">
+													<div class="field-block">
+														<label for="course-subtitle">Pricing *</label>
+														<div class="field">
+															<div class="select-icon">
+																<select class="simplebox custom-selectbox form-control" id="course-pricing">
+																	<option>FREE</option>
+																	<option>Price 1</option>
+																	<option>Price 2</option>
+																	<option>Price 3</option>
+																	<option>Price 4</option>
+																	<option>Price 5</option>
+																</select>
+																
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="field-block">
+														<label for="course-language">Language *</label>
+														<div class="field">
+															<div class="select-icon">
+																<select class="simplebox custom-selectbox form-control" id="course-language">
+																	<option>Choose a language</option>
+																	<option>Language 1</option>
+																	<option>Language 2</option>
+																	<option>Language 3</option>
+																	<option>Language 4</option>
+																	<option>Language 5</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="field-block">
+														<label for="course-language">Level *</label>
+														<div class="field">
+															<div class="select-icon">
+																<select class="simplebox custom-selectbox form-control" id="course-level">
+																	<option>Beginner</option>
+																	<option>Level 1</option>
+																	<option>Level 2</option>
+																	<option>Level 3</option>
+																	<option>Level 4</option>
+																	<option>Level 5</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<div class="form-block">
+											<legend>Course Details</legend>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="course-language">Title *</label>
+														<div class="field">
+															<textarea class="simplebox form-control mb-2" name="" id="course-detail" cols="30" rows="5"></textarea>
+															<span class="span-desc">In english only, no HTML, no web or email address, no CAPS</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="course_goals">Goals *</label>
+														<span>Maximum of 8</span>
+														<div class="field" data-max='8'>
+															<div class="field-row d-flex">
+																<input class="simplebox form-control" id="course-goals" name="course_goals" type="text"/>
+																<a href="#" class="btn btn-toggle btn-add"><i></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="course_benefits">Course Benefits *</label>
+														<span>Maximum of 8</span>
+														<div class="field" data-max='8'>
+															<div class="field-row d-flex">
+																<input class="simplebox form-control" id="course-benefits" name="course_benefits" type="text"/>
+																<a href="#" class="btn btn-toggle btn-add"><i></i></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<div class="form-block">
+											<legend>Upload</legend>
+											<p>Upload an image or video to represent your course.</p>
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="field-block">
+														<label for="course_image">Image File *</label>
+														<div class="field">
+															<input class="custom-file" type="file" id="course_image" name="course_image" data-multiple-caption="{count} files selected" multiple >
+															<label for="course_image">
+																<span class="file-name">No file selected</span>
+																<span class="btn btn-01">Browse...</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="field-block">
+														<label for="course_video">Video File *</label>
+														<div class="field">
+															<input class="custom-file" type="file" id="course_video" name="course_video" >
+															<label for="course_video">
+																<span class="file-name">No file selected</span>
+																<span class="btn btn-01">Browse...</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+									</div>
+								</div>
+								<!-- Step 2 -->
+								<span class="item-title">Instructor Information</span>
+								<div class="form-item">
+									<div class="form-head">
+										<h2>Instructor Profile</h2>
+										<p>Tell the student more about the teacher and their background.</p>
+									</div>
+									<hr>
+									<div class="form-body">
+										<div class="form-block">
+											<legend>Personal Information</legend>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="personal-name">Name *</label>
+														<div class="field">
+															<div class="select">
+																<input id="personal-name" name="course_name" class="simplebox form-control mb-2" type="text" maxlength="50">
+																<span class="span-desc">50 character limit</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="personal-title">Tilte *</label>
+														<p>Describe your main focus as an instructor (“UX Consultant and Site Designer”).</p>
+														<div class="field">
+															<div class="select">
+																<input id="personal-title" class="simplebox form-control mb-2" name="personal_title" type="text" maxlength="100">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="personal-description">Description *</label>
+														<p>Please write a short profile of yourself for potential students.</p>
+														<div class="field">
+															<textarea class="simplebox form-control mb-2" name="" id="personal-description" cols="30" rows="5"></textarea>
+															<span class="span-desc">In english only, no HTML, no web or email address, no CAPS</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="website-url">Website URL</label>
+														<div class="field">
+															<div class="select">
+																<input id="website-url" name="website_url" class="simplebox form-control mb-2" type="text" maxlength="50">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="facebook-url">Facebook URL</label>
+														<div class="field">
+															<div class="select">
+																<input id="facebook-url" name="facebook_url" class="simplebox form-control mb-2" type="text" maxlength="50">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="field-block">
+														<label for="twitter-url">Twitter URL</label>
+														<div class="field">
+															<div class="select">
+																<input id="twitter-url" name="twitter_url" class="simplebox form-control mb-2" type="text" maxlength="50">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+										<div class="form-block">
+											<legend>Upload</legend>
+											<p>Upload an image or video to represent your course.</p>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="field-block">
+														<label for="course_image">Image File *</label>
+														<div class="field">
+															<input class="custom-file" type="file" id="personal_image" name="course_image" data-multiple-caption="{count} files selected" multiple >
+															<label for="course_image">
+																<span class="file-name">No file selected</span>
+																<span class="btn btn-01">Browse...</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<hr>
+									</div>
+								</div>
+								<!-- Step 3 -->
+								<span class="item-title">Module Information</span>
+								<div class="form-item">
+									<div class="form-head">
+										<h2>Module Information</h2>
+										<p>Add your course modules here.</p>
+									</div>
+									<hr>
+									<div class="form-body">
+										<div class="form-block">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="module-wrapper">
+														<div class="module-block mb-3">
+															<div class="form-block mt-0">
+																<legend>Personal Information</legend>
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="field-block">
+																			<label for="course_image">Title *</label>
+																			<div class="field">
+																				<input id="module-title" class="simplebox form-control bg-white mb-2" name="module-title" type="text">
+																			</div>
+																		</div>
+																		<div class="field-block">
+																			<label for="course-language">Description *</label>
+																			<div class="field">
+																				<textarea class="simplebox bg-white form-control mb-2" name="" id="module-detail" cols="30" rows="5"></textarea>
+																				<span class="span-desc">In english only, no HTML, no web or email address, no CAPS</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="module-add-row">
+															<a class="addel-add add-text" href="#/">ADD NEW MODULE</a>
+															<a class="addel-add module-btn" href="#/"><img src="assets/images/add.svg" style="height: 19px" alt=""></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 offset-md-2 text-center">
+						<div class="footer-title">
+							<span>Company</span>
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Press</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Testiominals</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<a href="#">
+							<img src="assets/images/footer_logo.png" alt="">
+						</a>
+						<ul class="icon-list">
+							<li><a href="#"><i class="fa fa-facebook icon-bg-dark"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter icon-bg-light"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram icon-bg-dark"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube-play icon-bg-light"></i></a></li>
+						</ul>
+					</div>	
+					<div class="col-md-2 text-center">
+						<div class="footer-title">
+							<span>Policies</span>
+							<ul>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">Pricing</a></li>
+								<li><a href="#">Intellectual Property</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright text-center">
+			<span>© Pendragon Labs LLC. 2017</span>
+		</div>
+	</footer>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+	<script type="text/javascript" src="assets/js/readmore.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.steps.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="assets/js/addel.jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			 //Show 1 modal
+			 $('.sign-up-link').click(function(){
+			 	$('#loginModal').removeClass("fade").modal("hide");
+			 });
+			  $('.login-link').click(function(){
+			 	$('#signUpModal').removeClass("fade").modal("hide");
+			 });
+
+			 // Steps
+			 var form = $('#form-create-course');
+			 form.children('.form-set').steps({
+			 	headerTag: '.item-title',
+			 	bodyTag: '.form-item',
+			 	transitionEffect: 'slideLeft',
+			 	labels: {
+			 		finish: "Publish",
+			 		next: "Next Step",
+			 		previous: "Previous Step",
+			 	},
+			 	onInit: function (event, currentIndex) {
+			 		$(event.currentTarget).find('.actions ul li a').addClass('btn btn-03');
+			 		$(event.currentTarget).find('.actions ul li a[href="#previous"]').toggleClass('btn-03').addClass('btn-02');
+
+			 		var saveBtn = '<li><a href="#save" class="text-uppercase">SAVE & CONTINUE LATER</a></li>';
+
+			 		if (currentIndex == 0) {
+			 			$(saveBtn).insertAfter($(event.currentTarget).find('.actions ul[aria-label=Pagination] li').first());
+			 			$(event.currentTarget).find('.actions ul[aria-label=Pagination] li').first().hide();
+			 		}
+			 		$('.actions ul[aria-label=Pagination]').on('click', 'a[href="#save"]', function(event) {
+			 			event.preventDefault();
+			 			alert('Saved!');
+			 		});
+
+			 	},
+			 	onStepChanging: function (event, currentIndex, newIndex)
+			 	{
+			 		form.validate().settings.ignore = ":disabled,:hidden";
+			 		return form.valid();
+			 	},
+			 	onFinishing: function (event, currentIndex)
+			 	{
+			 		form.validate().settings.ignore = ":disabled";
+			 		return form.valid();
+			 	},
+			 	onStepChanged: function (event, currentIndex, newIndex)
+			 	{
+			 		if (currentIndex != 0) {
+			 			$(event.currentTarget).find('.actions ul[aria-label=Pagination] li').first().show();
+			 		}
+
+			 	},
+			 	onFinished: function (event, currentIndex)
+			 	{
+			 		alert("Submitted!");
+			 	}
+			 });
+			 // Add button
+			 $('.form-set').on('click', '.btn-add', function(event) {
+			 	event.preventDefault();
+
+			 	var fieldRow = $(this).parents('.field-row');
+			 	if ($(this).parents('.field').find('.field-row').length < $(this).parents('.field').data('max')) {
+			 		if ($(this).parents('.field-row').find('.form-control').val()) {
+
+			 			fieldRow.clone().addClass('has-value').insertBefore($(this).parents('.field-row'));
+
+			 			fieldRow.find('.form-control').prop({
+			 				id: fieldRow.find('.form-control').attr('id')+'_'+$(this).parents('.field').find('.field-row').length
+			 			}).val('');
+
+			 			fieldRow.prev('.field-row').find('.btn-add').toggleClass('btn-add btn-minus');
+			 			$(this).parents('.field-row').find('.form-control').removeClass('error');
+
+			 		} else {
+			 			$(this).parents('.field-row').find('.form-control').addClass('error');
+			 		}
+
+			 	}
+
+			 });
+			 //Minus button
+			 $('.form-set').on('click', '.btn-minus', function(event) {
+			 	event.preventDefault();
+			 	var fieldRow = $(this).parents('.field-row');
+			 	fieldRow.remove();
+			 });
+
+			 var inputs = document.querySelectorAll( '.custom-file' );
+			 Array.prototype.forEach.call( inputs, function( input ) {
+			 	var label	 = input.nextElementSibling,
+			 	labelVal = label.innerHTML;
+
+			 	input.addEventListener( 'change', function( e )
+			 	{
+			 		var fileName = '';
+			 		if( this.files && this.files.length > 1 )
+			 			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			 		else
+			 			fileName = e.target.value.split( '\\' ).pop();
+
+			 		if( fileName )
+			 			label.querySelector( '.file-name' ).innerHTML = fileName;
+			 		else
+			 			label.innerHTML = labelVal;
+			 	});
+			 });
+			 //
+			 $('.module-wrapper').addel({
+			 	classes: {
+			 		target: 'module-block'
+			 	},
+			 	animation: {
+			 		duration: 100
+			 	}
+			 });
+		});
+	</script>
+</body>
+</html>
