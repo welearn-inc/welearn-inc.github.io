@@ -69,6 +69,64 @@ ul li {
 .bg-white {
 	background-color: #fff;
 }
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+/*========================================
+			Radio Button
+=========================================*/
+input[type="checkbox"], input[type="radio"]{
+	position: absolute;
+	right: 9000px;
+}
+input[type="radio"] + .label-text:before{
+	content: "\f10c";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+	content: "\f192";
+	color: #2281e7;
+	animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+	color: #aaa;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+	content: "\f111";
+	color: #ccc;
+}
+@keyframes effect{
+	0%{transform: scale(0);}
+	25%{transform: scale(1.3);}
+	75%{transform: scale(1.4);}
+	100%{transform: scale(1);}
+}
 /*========================================
 			Navbar
 =========================================*/
@@ -208,16 +266,16 @@ ul li {
 	display: flex;
 }
 .profile-btn {
-	padding: 0 25px;
 	font-weight: 500;
 	display: flex;
 }
 .profile-btn img {
 	height: 22px;
 	align-self: center;
-	margin-right: 15px;
+	margin-right: 10px;
 }
 .profile-btn a  {
+	color: #2d2e33;
 	align-self: center;
 }
 /*========================================
@@ -856,6 +914,51 @@ hr.or-divider:after {
 .menu-nav ul ul ul li:last-child a {
 	border-bottom: none;
 	float: right;
+}
+/*Logined Menu*/
+.profile-btn {
+    display: flex;
+}
+.profile-btn:hover {
+	background-color: #f4f4f4;
+}
+.profile-btn ul {
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin-bottom: 0 !important;
+	min-width: calc(100% + 100px);
+	padding: 0px 20px;
+}
+.profile-btn ul ul {
+	display: none;
+	position: absolute;
+	background-color: #f4f4f4;
+	top: 100%;
+	right: 0;
+}
+.profile-btn ul ul li:first-child {
+	margin-top: 1em;
+}
+.profile-btn ul ul li:last-child {
+	margin-bottom: 1em;
+}
+.profile-btn ul ul li a {
+	display: block;
+	color: #2d2e33;
+	padding: 5px 10px;
+	font-size: 14px;
+}
+.profile-btn ul ul li a:hover {
+	color: #227cdf;
+}
+.profile-btn:hover > ul ul {
+	display: block;
+}
+.profile-btn hr {
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 100px;
 }
 /*========================================
 			Course Head 1 Preview
@@ -1787,7 +1890,6 @@ table tbody tr:nth-child(even) {
 }
 .module-block {
 	background-color: #f4f4f4;
-	padding: 30px;
 }
 .module-add-row {
 	background-color: #f4f4f4;
@@ -1803,6 +1905,41 @@ table tbody tr:nth-child(even) {
 .module-btn {
 	padding: 15px 20px;
 	border-left: 1px solid #e0e0e1;
+	outline: none;
+}
+.field .form-check {
+	color: #828384;
+	padding-top: 10px;
+}
+.file-caption.icon-visible .file-caption-name {
+	padding-left: 0 !important;
+}
+.file-caption {
+	border-radius: 0 !important;
+	padding: 12px 10px !important;
+	background-color: #f4f4f4;
+}
+.form-module .file-caption {
+	background-color: #fff;
+}
+.btn-file {
+	border-radius: 0 !important;
+}
+.input-group-btn {
+	position: absolute !important;
+	right: 6px;
+	top: 6px;
+	z-index: 100;
+}
+.form-module {
+	padding: 30px;
+}
+.module-delete-row {
+	background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0e0e1;
 }
 @media only screen and (min-width: 768px) {
   .form-set .steps ul li a,

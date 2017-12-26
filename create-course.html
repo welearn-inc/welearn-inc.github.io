@@ -23,6 +23,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
 	<!-- Hover -->
 	<link rel="stylesheet" href="assets/css/hover-min.css">
+	<!-- File Input -->
+	<link rel="stylesheet" href="assets/css/fileinput.min.css">
 </head>
 <body>
 	<!-- Header -->
@@ -65,9 +67,25 @@
 					<div class="create-btn btn-animate">
 						<a class="align-self-center" href="#">Create a Course</a>
 					</div>
-					<div class="profile-btn btn-animate">
-						<img src="assets/images/user_profile_login_01.jpg" alt="">
-						<a href="#">Scott</a>
+					<div class="profile-btn">
+						<ul>
+							<li>
+								<img src="assets/images/user_profile_login_01.jpg" alt="">
+								<a href="#">Scott</a>
+								<ul>
+									<li><a href="#">Wish List</a></li>
+									<li><a href="#">Setting</a></li>
+									<li><a href="#">Support</a></li>
+									<hr>
+									<li><a href="create-course.html">Create A Course</a></li>
+									<li><a href="#">Affiliates</a></li>
+									<li><a href="#">About Us</a></li>
+									<hr>
+									<li><a href="#">Log Out</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -319,11 +337,12 @@
 													<div class="field-block">
 														<label for="course_image">Image File *</label>
 														<div class="field">
-															<input class="custom-file" type="file" id="course_image" name="course_image" data-multiple-caption="{count} files selected" multiple >
+															<!-- <input class="custom-file" type="file" id="course_image" name="course_image" data-multiple-caption="{count} files selected" multiple >
 															<label for="course_image">
 																<span class="file-name">No file selected</span>
 																<span class="btn btn-01">Browse...</span>
-															</label>
+															</label> -->
+															<input id="input-b1" name="input-b1" type="file" class="course-file" data-show-preview="false">
 														</div>
 													</div>
 												</div>
@@ -331,11 +350,12 @@
 													<div class="field-block">
 														<label for="course_video">Video File *</label>
 														<div class="field">
-															<input class="custom-file" type="file" id="course_video" name="course_video" >
+															<!-- <input class="custom-file" type="file" id="course_video" name="course_video" >
 															<label for="course_video">
 																<span class="file-name">No file selected</span>
 																<span class="btn btn-01">Browse...</span>
-															</label>
+															</label> -->
+															<input id="input-b2" name="input-b1" type="file" class="course-file" data-show-preview="false">
 														</div>
 													</div>
 												</div>
@@ -429,11 +449,12 @@
 													<div class="field-block">
 														<label for="course_image">Image File *</label>
 														<div class="field">
-															<input class="custom-file" type="file" id="personal_image" name="course_image" data-multiple-caption="{count} files selected" multiple >
-															<label for="course_image">
+															<!-- <input class="custom-file" type="file" id="personal_image" name="personal_image" data-multiple-caption="{count} files selected" multiple >
+															<label for="personal_image">
 																<span class="file-name">No file selected</span>
 																<span class="btn btn-01">Browse...</span>
-															</label>
+															</label> -->
+															<input id="input-b4" name="input-b1" type="file" data-show-preview="false" class="course-file bg-white">
 														</div>
 													</div>
 												</div>
@@ -456,26 +477,64 @@
 												<div class="col-md-12">
 													<div class="module-wrapper">
 														<div class="module-block mb-3">
-															<div class="form-block mt-0">
-																<legend>Personal Information</legend>
-																<div class="row">
-																	<div class="col-md-12">
-																		<div class="field-block">
-																			<label for="course_image">Title *</label>
-																			<div class="field">
-																				<input id="module-title" class="simplebox form-control bg-white mb-2" name="module-title" type="text">
+															<div class="form-module">
+																<div class="form-block mt-0">
+																	<legend>Personal Information</legend>
+																	<div class="row">
+																		<div class="col-md-12">
+																			<div class="field-block">
+																				<label for="course_image">Title *</label>
+																				<div class="field">
+																					<input id="module-title" class="simplebox form-control bg-white mb-2" name="module-title" type="text">
+																				</div>
 																			</div>
-																		</div>
-																		<div class="field-block">
-																			<label for="course-language">Description *</label>
-																			<div class="field">
-																				<textarea class="simplebox bg-white form-control mb-2" name="" id="module-detail" cols="30" rows="5"></textarea>
-																				<span class="span-desc">In english only, no HTML, no web or email address, no CAPS</span>
+																			<div class="field-block">
+																				<label for="course-language">Description *</label>
+																				<div class="field">
+																					<textarea class="simplebox bg-white form-control mb-2" name="" id="module-detail" cols="30" rows="5"></textarea>
+																					<span class="span-desc">In english only, no HTML, no web or email address, no CAPS</span>
+																				</div>
+																			</div>
+																			<div class="field-block">
+																				<label for="module-content">Content Type</label>
+																				<div class="field">
+																					<div class="form-check form-check-inline">
+																						<label>
+																							<input type="radio" name="radio" checked> <span class="label-text">Upload File</span>
+																						</label>
+																					</div>
+																					<div class="form-check form-check-inline">
+																						<label>
+																							<input type="radio" name="radio"> <span class="label-text">Link</span>
+																						</label>
+																					</div>
+																					<div class="form-check form-check-inline">
+																						<label>
+																							<input type="radio" name="radio"> <span class="label-text">Record Video</span>
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="field-block">
+																				<label for="course_image">Image File *</label>
+																				<div class="field">
+																				<!-- <input class="custom-file" type="file" id="module_image" name="module_image">
+																				<label for="module_image" class="bg-white">
+																					<span class="file-name">No file selected</span>
+																					<span class="btn btn-01">Browse...</span>
+																				</label> -->
+																				<input id="input-b3" name="input-b1" type="file" data-show-preview="false" class="course-file bg-white">
 																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
+														</div>
+
+														<div class="module-delete-row">
+															<a class="addel-detele add-text" href="#/">REMOVE NEW MODULE</a>
+															<a class="addel-delete module-btn" href="#/"><img src="assets/images/substract.svg" style="height: 19px" alt=""></a>
+														</div>
 														</div>
 														<div class="module-add-row">
 															<a class="addel-add add-text" href="#/">ADD NEW MODULE</a>
@@ -549,6 +608,7 @@
 	<script type="text/javascript" src="assets/js/jquery.steps.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="assets/js/addel.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			 //Show 1 modal
@@ -613,6 +673,7 @@
 			 	event.preventDefault();
 
 			 	var fieldRow = $(this).parents('.field-row');
+			 	console.log(fieldRow);
 			 	if ($(this).parents('.field').find('.field-row').length < $(this).parents('.field').data('max')) {
 			 		if ($(this).parents('.field-row').find('.form-control').val()) {
 
@@ -638,7 +699,7 @@
 			 	var fieldRow = $(this).parents('.field-row');
 			 	fieldRow.remove();
 			 });
-
+			 //File Browse
 			 var inputs = document.querySelectorAll( '.custom-file' );
 			 Array.prototype.forEach.call( inputs, function( input ) {
 			 	var label	 = input.nextElementSibling,
@@ -658,15 +719,31 @@
 			 			label.innerHTML = labelVal;
 			 	});
 			 });
-			 //
+			 // Duplicate Form
 			 $('.module-wrapper').addel({
 			 	classes: {
 			 		target: 'module-block'
 			 	},
 			 	animation: {
 			 		duration: 100
+			 	},
+			 	events: {
+			 		added: function(event) {
+			 			var fieldRow = $('.module-block').last();
+			 			fieldRow.find('input:radio').prop({
+			 				name: 'radio'+'_'+$(this).find('.module-block').length
+			 			}).val('');
+
+			 		}
 			 	}
 			 });
+
+			 $(".course-file").fileinput({
+			 	'showUpload':false, 
+			 	'previewFileType':'any',
+			 	'showRemove':false
+			});
+			
 		});
 	</script>
 </body>
