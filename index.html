@@ -544,6 +544,119 @@
 										</div>
 									</div>
 								</div>
+								<div class="carousel-x-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/img_thumb_01.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="course-preview.html" class="card-title">The Complete Metadata Bootcamp</a>
+											<p class="card-text">Create high ranking websites that offer a real return on investment.</p>
+											<a href="#" class="card-author">Tim Stevens </a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <!-- end card -->
+									<div class="webui-popover-content">
+										<div class="course-pop-wrapper">
+											<div class="course-pop-inner">
+												<div class="course-pop-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="course-pop-title">
+													<a href="course-preview.html">The Complete Metadata Bootcamp</a>
+												</div>
+												<div class="course-pop-desc">
+													<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+														<li>Lorem ipsum dolor</li>
+														<li>Lorem ipsum dolor sit amet.</li>
+													</ul>
+												</div>
+												<div class="course-pop-author">
+													<a href="#">Tim Stevens </a><span> | 112 Students</span>
+												</div>
+												<hr>
+												<div class="pop-btn-group text-center">
+													<a class="btn-preview" href="#">Preview</a>
+													<a class="btn-enroll" href="#">Enroll</a>
+												</div>
+												<div class="course-pop-whishlist text-center">
+													<a href="#"><i class="fa fa-heart"></i>  Save to Whistlist</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-x-item">
+									<div class="card" style="width: 20rem;">
+										<img class="card-img-top" src="assets/images/img_thumb_02.jpg" alt="Card image cap">
+										<div class="card-body">
+											<a href="course-preview.html" class="card-title">The Complete Metadata Bootcamp</a>
+											<p class="card-text">Create high ranking websites that offer a real return on investment.</p>
+											<a href="#" class="card-author">Tim Stevens </a><span> | 112 Students</span>
+											<div class="card-bot d-flex flex-row justify-content-between align-items-center">
+												<div class="card-course-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="card-right">
+													<div class="rating">
+														<span>236</span>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+														<i class="fa fa-star"></i>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="webui-popover-content">
+										<div class="course-pop-wrapper">
+											<div class="course-pop-inner">
+												<div class="course-pop-name">
+													<a href="#">Web Developer</a>
+												</div>
+												<div class="course-pop-title">
+													<a href="course-preview.html">The Complete Metadata Bootcamp</a>
+												</div>
+												<div class="course-pop-desc">
+													<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+													<ul>
+														<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+														<li>Lorem ipsum dolor</li>
+														<li>Lorem ipsum dolor sit amet.</li>
+													</ul>
+												</div>
+												<div class="course-pop-author">
+													<a href="#">Tim Stevens </a><span> | 112 Students</span>
+												</div>
+												<hr>
+												<div class="pop-btn-group text-center">
+													<a class="btn-preview" href="#">Preview</a>
+													<a class="btn-enroll" href="#">Enroll</a>
+												</div>
+												<div class="course-pop-whishlist text-center">
+													<a href="#"><i class="fa fa-heart"></i>  Save to Whistlist</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1461,25 +1574,6 @@
 			 	dots:false,
 			 	smartSpeed:500,
 			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
-			 	afterAction: function(){
-			 		if ( this.itemsAmount > this.visibleItems.length ) {
-			 			$('.next').show();
-			 			$('.prev').show();
-
-			 			$('.next').removeClass('disabled');
-			 			$('.prev').removeClass('disabled');
-			 			if ( this.currentItem == 0 ) {
-			 				$('.prev').css("display","none");
-			 			}
-			 			if ( this.currentItem == this.maximumItem ) {
-			 				$('.next').addClass('display');
-			 			}
-
-			 		} else {
-			 			$('.next').hide();
-			 			$('.prev').hide();
-			 		}
-			 	}
 			 });
 			 //Instructor Carousel
 			 $('.instructor-container').owlCarousel({
@@ -1490,6 +1584,16 @@
 			 	smartSpeed:700,
 			 	nav:true,
 			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
+			 });
+			 //Last carousel item popover to left
+			 $(".owl-carousel").on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function (e) {
+			 	if (!e.namespace) return;
+			 	var carousel = e.relatedTarget,
+			 	current = carousel.current();
+			 	if (current === carousel.maximum()) {
+			 		var lastcard = $(this).find('.carousel-x-item').last();
+			 		lastcard.find('.card').attr('data-placement','left');
+			 	}
 			 });
 			 //Show 1 modal
 			 $('.sign-up-link').click(function(){

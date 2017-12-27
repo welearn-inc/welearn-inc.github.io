@@ -1686,25 +1686,6 @@
 			 	dots:false,
 			 	smartSpeed:500,
 			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
-			 	afterAction: function(){
-			 		if ( this.itemsAmount > this.visibleItems.length ) {
-			 			$('.next').show();
-			 			$('.prev').show();
-
-			 			$('.next').removeClass('disabled');
-			 			$('.prev').removeClass('disabled');
-			 			if ( this.currentItem == 0 ) {
-			 				$('.prev').css("display","none");
-			 			}
-			 			if ( this.currentItem == this.maximumItem ) {
-			 				$('.next').addClass('display');
-			 			}
-
-			 		} else {
-			 			$('.next').hide();
-			 			$('.prev').hide();
-			 		}
-			 	}
 			 });
 			 //School Carousel 
 			 $(".school-carousel-wrapper").owlCarousel({
@@ -1714,24 +1695,14 @@
 			 	dots:false,
 			 	smartSpeed:500,
 			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
-			 	afterAction: function(){
-			 		if ( this.itemsAmount > this.visibleItems.length ) {
-			 			$('.next').show();
-			 			$('.prev').show();
-
-			 			$('.next').removeClass('disabled');
-			 			$('.prev').removeClass('disabled');
-			 			if ( this.currentItem == 0 ) {
-			 				$('.prev').css("display","none");
-			 			}
-			 			if ( this.currentItem == this.maximumItem ) {
-			 				$('.next').addClass('display');
-			 			}
-
-			 		} else {
-			 			$('.next').hide();
-			 			$('.prev').hide();
-			 		}
+			 });
+			 $(".owl-carousel").on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', function (e) {
+			 	if (!e.namespace) return;
+			 	var carousel = e.relatedTarget,
+			 	current = carousel.current();
+			 	if (current === carousel.maximum()) {
+			 		var lastcard = $(this).find('.carousel-x-item').last();
+			 		lastcard.find('.card').attr('data-placement','left');
 			 	}
 			 });
 
