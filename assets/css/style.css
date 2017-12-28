@@ -264,14 +264,15 @@ input[type="radio"]:disabled + .label-text:before{
 .user-sign-up a:hover {
 	background-color: #3496FF;
 }
+
 /*========================================
 			Catagory Menu
 =========================================*/
 .btn-catalog {
-	border-left: 1px solid #e0e0e1;
-	border-right: 1px solid #e0e0e1;
+	/*border-left: 1px solid #e0e0e1;
+	border-right: 1px solid #e0e0e1;*/
 	padding: 22px 20px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
 	font-weight: 500;
 }
 .btn-catalog:before {
@@ -292,7 +293,10 @@ input[type="radio"]:disabled + .label-text:before{
 	background-color: #f4f4f4;
 }
 .menu-nav {
-	height: 70px;
+	border-left: 1px solid #e0e0e1;
+    border-right: 1px solid #e0e0e1;
+    align-self: stretch;
+    display: flex;
 }
 .menu-nav ul ul {
 	display: none;
@@ -304,9 +308,9 @@ input[type="radio"]:disabled + .label-text:before{
 .menu-nav ul {
 	list-style: none;
 	position: relative;
-	display: inline-table;
+	display: flex;
 	margin-bottom: 0;
-	min-width: calc(100% + 1em);
+	min-width: calc(100% + 2em);
 }
 .menu-nav ul:after {
 	content: "";
@@ -1075,7 +1079,6 @@ hr.or-divider:after {
 }
 .save-whishlist {
 	color: rgba(255,255,255,0.6);
-	padding-top: 20px;
 	text-transform: uppercase;
 }
 .save-whishlist i {
@@ -2234,3 +2237,68 @@ hr.or-divider:after {
 }
 .text-form .module-wrapper .select-icon:after {
 	top:2px;
+}
+/*========================================
+			Responsive
+=========================================*/
+@media (min-width: 768px) and (max-width: 1024px) {  
+	.navbar-brand img {
+		height: 30px;
+		padding-bottom: 0px;
+		padding-right: 20px; 
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .center-block img {
+  	width: 80%;
+  }
+  .feature-item-desc {
+  	padding-left: 30px;
+  }
+  .feature-item-desc p {
+  	font-size: 12px;
+  }
+  .block-courses-img .col-md-6 .course-detail a span {
+  	padding-top: 5px;
+  	font-weight: 500;
+  }
+  .course-head-wrapper {
+  	padding: 100px 30px 10px 30px;
+  }
+  .course-title {
+  	font-size: 25px;
+  }
+  .course-tag {
+  	font-size: 15px;
+  	font-weight: 700;
+  }
+  .course-head-2-wrapper .btn-02 {
+  	font-size: 14px;
+  }
+  .course-head-2-wrapper .btn-03 {
+  	font-size: 14px;
+  	padding-left: 50px;
+    padding-right: 50px;
+  }
+  .course-content-icon {
+  	width: 15%;
+  }
+  .course-content img {
+  	width: 15%;
+  }
+  .course-benefits .course-content img {
+  	width: 30%;
+  }
+  .info-title h3 {
+  	font-size: 26px;
+  }
+  .info-title h4 {
+  	font-size: 19px;
+  }
+  .course-instructor-info p {
+  	font-size: 14px;
+  }
+  .course-preview-title {
+  	font-size: 25px;
+  }
+}

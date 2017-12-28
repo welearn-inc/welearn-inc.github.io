@@ -57,7 +57,7 @@
 						</li>
 					</ul>
 				</div>
-				<form class="d-flex my-2 my-lg-0" style="width: 40%">
+				<form class="d-flex my-2 my-lg-0 ml-3" style="width: 40%">
 					<input class="search-form simplebox form-control mr-sm-2" type="search" placeholder="Find a course..." aria-label="Search">
 					<a class="search-btn hvr-fade" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
 				</form>
@@ -211,13 +211,13 @@
 			<div class="course-head-2-wrapper">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-3 col-sm-2 border-right p-3">
+						<div class="col-md-2 col-xl-3 col-sm-2 border-right p-3">
 							<h3><span class="course-price">$ FREE</span></h3>
 						</div>
-						<div class="col-md-6 p-3">
+						<div class="col-md-6 col-xl-6 p-3 d-flex align-items-center">
 							<a class="save-whishlist" href="#"><i class="fa fa-heart-o" aria-hidden="true"></i><small>Save to wishlist</small></a>
 						</div>
-						<div class="col-md-3 p-3">
+						<div class="col-md-4 col-xl-3 p-3">
 							<a href="#" class="btn btn-02 mr-2">Preview Course</a>
 							<a href="#" class="btn btn-03">Enroll</a>
 
@@ -312,7 +312,7 @@
 								<div class="course-preview-title">Module Preview</div>
 								<div class="course-count pt-3">10 Modules</div>
 							</div>
-							<div class="course-module-content">
+							<div class="course-module-content" style="height: 1300px">
 								<ul class="accordion-block">
 									<li>
 										<div class="accordion-head">
@@ -1078,31 +1078,31 @@
 								</div>
 								<div class="school-carousel-item">
 									<figure>
-										<img class="img-responsive" src="assets/images/img_school_02.jpg" alt="">
+										<img class="img-fluid" src="assets/images/img_school_02.jpg" alt="">
 										<figcaption>Law Degree Princeton University</figcaption>
 									</figure>
 								</div>
 								<div class="school-carousel-item">
 									<figure>
-										<img class="img-responsive" src="assets/images/img_school_03.jpg" alt="">
+										<img class="img-fluid" src="assets/images/img_school_03.jpg" alt="">
 										<figcaption>MBA in Engineering, Yale</figcaption>
 									</figure>
 								</div>
 								<div class="school-carousel-item">
 									<figure>
-										<img class="img-responsive" src="assets/images/img_school_04.jpg" alt="">
+										<img class="img-fluid" src="assets/images/img_school_04.jpg" alt="">
 										<figcaption>Member, The Planetary Society</figcaption>
 									</figure>
 								</div>
 								<div class="school-carousel-item">
 									<figure>
-										<img class="img-responsive" src="assets/images/img_school_01.jpg" alt="">
+										<img class="img-fluid" src="assets/images/img_school_01.jpg" alt="">
 										<figcaption>Member, The Planetary Society</figcaption>
 									</figure>
 								</div>
 								<div class="school-carousel-item">
 									<figure>
-										<img class="img-responsive" src="assets/images/img_school_02.jpg" alt="">
+										<img class="img-fluid" src="assets/images/img_school_02.jpg" alt="">
 										<figcaption>MBA in Engineering, Yale</figcaption>
 									</figure>
 								</div>
@@ -1685,6 +1685,18 @@
 			 	nav:true,
 			 	dots:false,
 			 	smartSpeed:500,
+			 	responsive: {
+			 		1366 : {
+			 			items:4,
+			 		},
+			 		1024 : {
+			 			items:3,
+			 		},
+			 		768 : {
+			 			items:2,
+			 			margin:1,
+			 		}
+			 	},
 			 	navText:["<img src='assets/images/slider_prev_01.jpg'>","<img src='assets/images/slider_next_01.jpg'>"],
 			 });
 			 //School Carousel 
@@ -1740,26 +1752,27 @@
 			  	heightMargin: 24,
 			  	moreLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x fa-inverse"></i></span>Read More</a>',
 			  	lessLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span>Read Less</a>',
-			  	startOpen: false
+			  	startOpen: false,
 			  });
 			  //Read More Module Section
 			  var itemHeight01 = $('.course-module-content li').height() * 8;
-			  var expHeight = $('.accordion-block').height();
-
 			  $('.course-module-content').readmore({
 			  	speed: 300,
 			  	collapsedHeight: itemHeight01,
-			  	maxHeight:expHeight,
-			  	heightMargin: 24,
-			  	expandedClass: 'accordion-block',
+			  	heightMargin: 30,
 			  	moreLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x fa-inverse"></i></span>LOAD MORE</a>',
 			  	lessLink: '<a href="#" class="btn-more-01"><span class="fa-stack"><i class="fa fa-stop fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span>Collapse</a>',
 			  	startOpen: false,
-			  	afterToggle: function( trigger, element, expanded ) {
-			  		if ( expanded ) {
-
-			  		}
-			  	},
+			  	// afterToggle: function( trigger, element, expanded ) {
+			  	// 	var accorHeight = $('.accordion-block').height();
+			  	// 	var expandedStt = $('.course-module-content').attr("aria-expanded");
+			  	// 	if(expanded) {
+			  	// 		$('.accordion-block .accordion-head').click(function(){
+			  	// 			console.log("click");
+			  	// 			$('.course-module-content').css('height', accorHeight+'px !important');
+			  	// 		});
+			  	// 	}
+			  	// },
 			  });
 			  //Read More Preview
 			  var itemHeight02 = $('.review-list .review-item').height() * 2;
