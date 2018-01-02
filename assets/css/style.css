@@ -607,6 +607,7 @@ hr.or-divider:after {
 .banner-form .search-btn i:hover {
 	background-color: #3496FF;
 }
+
 /*========================================
 				Feature Section
 =========================================*/
@@ -855,11 +856,12 @@ hr.or-divider:after {
 .block-teacher-img {
 	position: relative;
 }
-.block-courses-img {
+.footer-item {
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	content: '';
+	width: 66%
 }
 .instructor-item {
 	width: 945px;
@@ -2055,7 +2057,7 @@ hr.or-divider:after {
 			Module Page
 =========================================*/
 .module-wrapper {
-	padding-top: 70px;
+	padding-top: 68px;
 }
 .module-wrapper h2 {
 	font-size: 32px;
@@ -2104,8 +2106,12 @@ hr.or-divider:after {
 	margin-top: -50px;
 	padding-bottom: 50px;
 }
+.module-img {
+	height: 100%;
+}
 .module-img img {
 	width: 100%;
+	height: 100%;
 }
 .module-img .play-toggle {
 	font-size: 2.5em;
@@ -2238,14 +2244,85 @@ hr.or-divider:after {
 .text-form .module-wrapper .select-icon:after {
 	top:2px;
 }
+
+.f-grow {
+	flex-grow: 1;
+	flex-basis: 0;
+}
 /*========================================
 			Responsive
 =========================================*/
-@media (min-width: 768px) and (max-width: 1024px) {  
-	.navbar-brand img {
-		height: 30px;
-		padding-bottom: 0px;
-		padding-right: 20px; 
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	.feature-container [class*= 'col-']{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.hero {
+		height: 50vh;
+	}
+	.banner-title h1 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	.banner-desc {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+	.banner-container {
+		padding: 35px 0;
+	}
+	.banner-search {
+		padding: 0 60px;
+	}
+	.banner-field {
+		padding: 5px 25px;
+		font-size: 16px;
+	}
+	.banner-form .search-btn i {
+		padding: 15px 20px;
+	}
+	.feature-item-desc p {
+		font-size: 12px;
+	}
+	.feature-item {
+		border-bottom: 1px solid #4d4e51;
+		padding: 20px;
+	}
+	.brand-item-list [class*='col-'] {
+		padding: 0 10px;
+	}
+	.card {
+		width: 22rem;
+	}
+	.hire-title h1 {
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+	.hire-desc {
+		font-size: 14px;
+		font-weight: 500;
+	}
+	.hire-btn a {
+		font-size: 18px;
+	}
+	.footer-item {
+		position: initial;
+		width: 72%;
+	}
+	.block-courses-img .col-md-6 .course-detail a {
+		margin: 30px 0 0 0;
+	}
+	.col-left {
+		flex: 27% !important;
+		max-width: 27% !important;
+	}
+	.col-right {
+		flex: 50% !important;
+		max-width: 50% !important;
+	}
+	.instructor-info {
+		padding: 12px;
 	}
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -2301,4 +2378,20 @@ hr.or-divider:after {
   .course-preview-title {
   	font-size: 25px;
   }
+  .module-img-detail h4 {
+  	padding-bottom: 20px;
+  }
+  .module-wrapper h2 {
+  	font-size: 28px;
+  }
+  .module-nav-block {
+  	padding: 50px 0;
+  }
+  .module-wrapper {
+  	padding-top: 0;
+  }
+
+  .brand-item-list [class*='col-'] {
+		padding: 0 10px;
+	}
 }
